@@ -5,7 +5,6 @@
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
@@ -28,6 +27,8 @@
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="fabaabc4273e4e67d52a5410e9b2fa7a59088976" />
+
+        <activity android:name=".Main2Activity"></activity>
     </application>
 
 </manifest>
