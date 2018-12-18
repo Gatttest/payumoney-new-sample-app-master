@@ -18,4 +18,9 @@ public class BaseApplication extends Application {
     public void setAppEnvironment(AppEnvironment appEnvironment) {
         this.appEnvironment = appEnvironment;
     }
+
+
+    public void setAppEnvironment22(AppEnvironment appEnvironment) {
+        this.appEnvironment = appEnvironment;
+    }
 }
