@@ -52,7 +52,7 @@ import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class MainActivity8 extends BaseActivity implements View.OnClickListener {
+public class MainActivity22 extends BaseActivity implements View.OnClickListener {
     public static final String TAG = "MainActivity : ";
     private boolean isDisableExitConfirmation = false;
     private String userMobile, userEmail;
@@ -241,9 +241,9 @@ public class MainActivity8 extends BaseActivity implements View.OnClickListener 
     private void setupCitrusConfigs() {
         AppEnvironment appEnvironment = ((BaseApplication) getApplication()).getAppEnvironment();
         if (appEnvironment == AppEnvironment.PRODUCTION) {
-            Toast.makeText(MainActivity8.this, "Environment Set to Production", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity22.this, "Environment Set to Production", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(MainActivity8.this, "Environment Set to SandBox", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity22.this, "Environment Set to SandBox", Toast.LENGTH_SHORT).show();
          }
     }
     /**
@@ -551,7 +551,7 @@ public class MainActivity8 extends BaseActivity implements View.OnClickListener 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progressDialog = new ProgressDialog(MainActivity8.this);
+            progressDialog = new ProgressDialog(MainActivity22.this);
             progressDialog.setMessage("Please wait...");
             progressDialog.show();
         }
@@ -608,13 +608,13 @@ public class MainActivity8 extends BaseActivity implements View.OnClickListener 
             progressDialog.dismiss();
             payNowButton.setEnabled(true);
             if (merchantHash.isEmpty() || merchantHash.equals("")) {
-                Toast.makeText(MainActivity8.this, "Could not generate hash", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity22.this, "Could not generate hash", Toast.LENGTH_SHORT).show();
             } else {
                 mPaymentParams.setMerchantHash(merchantHash);
                 if (AppPreference.selectedTheme != -1) {
-                    PayUmoneyFlowManager.startPayUMoneyFlow(mPaymentParams, MainActivity8.this, AppPreference.selectedTheme, mAppPreference.isOverrideResultScreen());
+                    PayUmoneyFlowManager.startPayUMoneyFlow(mPaymentParams, MainActivity22.this, AppPreference.selectedTheme, mAppPreference.isOverrideResultScreen());
                 } else {
-                    PayUmoneyFlowManager.startPayUMoneyFlow(mPaymentParams, MainActivity8.this, R.style.AppTheme_default, mAppPreference.isOverrideResultScreen());
+                    PayUmoneyFlowManager.startPayUMoneyFlow(mPaymentParams, MainActivity22.this, R.style.AppTheme_default, mAppPreference.isOverrideResultScreen());
                 }
             }
         }
